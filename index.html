@@ -17,41 +17,39 @@
         </header>
         <div class="content">
             <table>
-                <tr>
-                    <th >Название</th>
-                    <th>Год выхода</th>
-                    <th>Страна</th>
-                    <th>Жанр</th>
-                    <th>Рейтинг</th>
-                    <th>Удалить</th>
-                </tr>
-                <tr>
-                    <th>Sky hith</th>
-                    <th>2005</th>
-                    <th>США</th>
-                    <th>фантастика</th>
-                    <th>6.4</th>
-                    <th><button class='delete'>Удалить</button></th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th >Название</th>
+                        <th>Год выхода</th>
+                        <th>Страна</th>
+                        <th>Жанр</th>
+                        <th>Рейтинг</th>
+                        <th>Удалить</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                
 
             </table>
             <div class="form">
                 <form>
                     <label for='text'>Название</label>
-                    <input type="text">
+                    <input type="text" class="Name">
                     <label for='number'>Год</label>
-                    <input type="number">
+                    <input type="number" class="year">
                     <label for='text'>Страна</label>
-                    <select>
+                    <select class="contry">
                         <option>США</option>
                         <option>Россия</option>
                         <option>Канада</option>
                         <option>Франция</option>
                     </select>
                     <label for='text'>Жанр</label>
-                    <input type="text">
+                    <input type="text" class="genre">
                     <label for='number'>Рейтинг</label>
-                    <input type="number">
+                    <input type="number" class="rating">
                 </form>
                 <button class="push">Добавить</button>
             </div>
