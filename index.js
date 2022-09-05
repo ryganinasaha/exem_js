@@ -1,12 +1,13 @@
 
-
-const name = document.querySelector('.name')
+const table = document.querySelector('table')
+const nam = document.querySelector('.name')
 const year = document.querySelector('.year')
 const contry = document.querySelector('.contry')
 const genre = document.querySelector('.genre')
-const rating = document.queryCommandValue('.rating')
+const rating = document.querySelector('.rating')
 const push = document.querySelector('.push')
 const delet = document.querySelector('.delete')
+const adit = document.querySelector('.adit')
 const container = document.querySelector('tbody')
 
 
@@ -15,25 +16,27 @@ const films = [
         name: 'Sky hith',
         year: 2005,
         contry: 'США',
-        genre: 'Sky hith',
+        genre: 'фэнтази',
         rating: 6.4
     }
 ]
 
 push.addEventListener('click' , () => {
     const newFilm = {
-        name: name.velue,
-        year: year.velue,
-        contry: contry.velue,
-        genre: genre.velue,
-        rating: rating.velue,
+        name: nam.value,
+        year: year.value,
+        contry: contry.value,
+        genre: genre.value,
+        rating: rating.value,
     }
     
     films.push(newFilm)
-
+    render()
 })
 
 render()
+
+
 
 function render() {
     container.innerHTML = ''
@@ -44,14 +47,24 @@ function render() {
             <th>${films[i].name}</th>
             <th>${films[i].year}</th>
             <th>${films[i].contry}</th>
-            <th>${films[i].contry}</th>
+            <th>${films[i].genre}</th>
             <th>${films[i].rating}</th>
-            <th><button class='delete'>Удалить</button></th> 
+            <th><button class='edit'>Редоктировать</button>  <button index='${films[i]}' class='delete'>Удалить</button></th> 
         </tr>
         `
     }
 }
 
+table.onclick = function(event) {
+    let target = event.target; 
+  
+    if (target.classList.contains('delete') != false) return; 
+    
+    let index = +target.getAttribute('index')
+
+    deletFilm(target);
+
+  };
 
 
 
