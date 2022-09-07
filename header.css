@@ -40,3 +40,12 @@ input, select {
 .doing {
     width: 300px;
 }
+.high {
+    margin-top: 20px;
+}
+.sort {
+    width: 200px;
+}
+.find {
+    width: 200px;
+}

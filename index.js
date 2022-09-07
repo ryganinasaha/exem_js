@@ -9,6 +9,8 @@ const push = document.querySelector('.push')
 const delet = document.querySelector('.delete')
 const adit = document.querySelector('.adit')
 const container = document.querySelector('tbody')
+const find = document.querySelector('.find')
+const sort = document.querySelector('.sort')
 
 
 const films = [
@@ -55,19 +57,32 @@ function render() {
     }
 }
 
+
+
+
 table.onclick = function(event) {
     let target = event.target; 
   
-    if (target.classList.contains('delete') != false) return; 
+    if (target.classList.contains('delete') === false) return; 
     
     let index = +target.getAttribute('index')
 
-    deletFilm(target);
-
+    films.splice(index, 1)
+    render()
+    console.log(index)
   };
 
+find.addEventListener(('onkeyup'), () => {
+    //получить значение
+    //for пройтись
+    // исравнить с films[i].names includs ...
+    findFilm()
+})
 
+function findFilm() {
 
+    
+}
 
 
 
@@ -80,7 +95,7 @@ function listSee() {
     for(let i = 0; i < list.length; i++) {
         listNew += `<li>${list[i]}</li>`
     }
-    console.log(listNew)
+    
     ul.innerHTML = listNew
 }
 listSee()
