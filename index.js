@@ -9,9 +9,8 @@ const push = document.querySelector('.push')
 const delet = document.querySelector('.delete')
 const adit = document.querySelector('.adit')
 const container = document.querySelector('tbody')
-const find = document.querySelector('.find')
 const sort = document.querySelector('.sort')
-
+const find = document.querySelector('.find');
 
 const films = [
     {
@@ -33,14 +32,14 @@ push.addEventListener('click' , () => {
     }
     
     films.push(newFilm)
-    render()
+    render(films)
 })
 
-render()
+render(films)
 
 
 
-function render() {
+function render(films) {
     container.innerHTML = ''
 
     for(let i = 0; i < films.length; i++) {
@@ -72,17 +71,20 @@ table.onclick = function(event) {
     console.log(index)
   };
 
-find.addEventListener(('onkeyup'), () => {
-    //получить значение
-    //for пройтись
-    // исравнить с films[i].names includs ...
-    findFilm()
-})
-
-function findFilm() {
-
+find.addEventListener(('keyup'), () => {
+    const value = find.value
     
-}
+    const newFilms = films.filter((item) => {
+
+        return item.name.includes(value)
+    })
+
+    render(newFilms)
+})
+    
+    
+
+
 
 
 
