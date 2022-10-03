@@ -11,9 +11,9 @@
     <div class="container-fluid">
 
         <header>
-            <a href="#" class="href">Фильмы</a>
-            <a href="#" class="href">Пользователи</a>
-            <a href="#" class="href">О сайте</a>
+            <a href="books.html" class="href">Books</a>
+            <a href="Visitors.html" class="href">Visitors</a>
+            <a href="statistics.html" class="href">Statistics</a>
         </header>
         <div class="content">
             <div class="high">
@@ -29,12 +29,14 @@
             <table>
                 <thead>
                     <tr>
-                        <th >Название</th>
-                        <th>Год выхода</th>
-                        <th>Страна</th>
-                        <th>Жанр</th>
-                        <th>Рейтинг</th>
-                        <th class='doing'>Действие</th>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>nameAftor</th>
+                        <th>year</th>
+                        <th>namePublish</th>
+                        <th>pagers</th>
+                        <th>amount</th>
+                        <th class='doing'>action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,21 +47,20 @@
             </table>
             <div class="form">
                 <form>
-                    <label for='text'>Название</label>
+                    <label for='number'>id</label>
+                    <input type="number" class="id">
+                    <label for='text'>namne</label>
                     <input type="text" class="name">
-                    <label for='number'>Год</label>
+                    <label for='text'>aftor</label>
+                    <input type="text" class="aftor">
+                    <label for='number'>year</label>
                     <input type="number" class="year">
-                    <label for='text'>Страна</label>
-                    <select class="contry">
-                        <option>США</option>
-                        <option>Россия</option>
-                        <option>Канада</option>
-                        <option>Франция</option>
-                    </select>
-                    <label for='text'>Жанр</label>
-                    <input type="text" class="genre">
-                    <label for='number'>Рейтинг</label>
-                    <input type="number" class="rating">
+                    <label for='text'>publishing house</label>
+                    <input type="text" class="publish">
+                    <label for='number'>pagers</label>
+                    <input type="number" class="pagers">
+                    <label for='number'>amount</label>
+                    <input type="number" class="amount">
                 </form>
                 <button class="push">Добавить</button>
             </div>
@@ -79,6 +80,6 @@
     
 
 
-    <script src='index.js'></script>
+    <script src='books.js'></script>
 </body>
 </html>
